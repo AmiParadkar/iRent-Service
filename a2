@@ -1,0 +1,500 @@
+   37  withch java
+   38  witch java
+   39  which java
+   40  ls -l /usr/bin/java
+   41  ls -l /System/Library/Frameworks/JavaVM.framework/Versions
+   42  pwd
+   43  clear
+   44  cd 
+   45  cd Documents/git
+   46  cd pix
+   47  export M2_HOME=/Users/ami/Documents/Software/Maven/apache-maven-3.2.5-bin/apache-maven-3.2.5
+   48  echo $M2_HOME
+   49  export M2=$M2_HOME/bin
+   50  export PATH=$M2:$PATH
+   51  ls
+   52  mvn clean install
+   53  mvn clean install
+   54  cd target/
+   55  ls -ltr
+   56  java -jar <build>  
+   57      <plugins>
+   58          <plugin>
+   59              <groupId>org.springframework.boot</groupId>
+   60              <artifactId>spring-boot-maven-plugin</artifactId>
+   61          </plugin>
+   62      </plugins>
+   63  java -jar pix-0.0.1-SNAPSHOT.jar
+   64  clear
+   65  java -jar pix-0.0.1-SNAPSHOT.jar
+   66  cd Documents/git/pix
+   67  cd target/
+   68  java -jar pix-0.0.1-SNAPSHOT.jar
+   69  git
+   70  heroku
+   71  pwd
+   72  cd ..
+   73  ls -ltr
+   74  git init
+   75  heroku login
+   76  heroku create -irent-service
+   77  heroku create irent-service
+   78  heroku create irent-service
+   79  git add .
+   80  clear
+   81  git commit -am "initial commit"
+   82  git push heroku master
+   83  heroku logs
+   84  git push heroku master
+   85  heroku logs
+   86  clear
+   87  heroku config
+   88  git add .
+   89  git commit -am "add Procfile"
+   90  git push heroku master
+   91  heroku logs
+   92  tail -f heroku log
+   93  heroku logs
+   94  heroku logs
+   95  clear
+   96  heruko log > t
+   97  heroku logs >t
+   98  vi t
+   99  rm t
+  100  git add .
+  101  git commit -am "add Procfile"
+  102  git push heroku master
+  103  heroku addons:create mongohq:ssd_1g_elastic
+  104  heroku addons:create mongolab:sandbox
+  105  cd
+  106  cd Documents/workspace/
+  107  ls
+  108  git clone https://github.com/spring-guides/gs-rest-service.git
+  109  ls -ltr
+  110  cd gs-rest-service/initial/
+  111  ls
+  112  hostname
+  113  pwd
+  114  pwd
+  115  hostname
+  116  pwd
+  117  cd 
+  118  cd Documents/workspace/
+  119  ls
+  120  cd springSecurityAngular/
+  121  ls
+  122  mvn spring-boot:run
+  123  mvn
+  124  echo $PAHT
+  125  echo$PATH
+  126  which mvn
+  127  wich heroku
+  128  which heroku
+  129  cd 
+  130  cd Documents/Software/Maven/
+  131  ls
+  132  cd apache-maven-3.2.5-bin/
+  133  ls
+  134  cd apache-maven-3.2.5
+  135  ls
+  136  pwd
+  137  export M2_HOME=/Users/ami/Documents/Software/Maven/apache-maven-3.2.5-bin/apache-maven-3.2.5
+  138  export M2=$M2_HOME/bin
+  139  export PATH=$M2:$PATH
+  140  cd
+  141  cd Documents/workspace/springSecurityAngular/
+  142  mvn
+  143  mvn spring-boot:run
+  144  mvn spring-boot:run -X
+  145  mvn spring-boot:run -X
+  146  cler
+  147  clear
+  148  mvn spring-boot:run -X
+  149  clear
+  150  mvn spring-boot:run -X
+  151  mvn spring-boot:run -X
+  152  celar
+  153  clear
+  154  echo $JAVA_HOME
+  155  cd /Library/Java/JavaVirtualMachines
+  156  ls
+  157  cd jdk1.8.0_40.jdk/
+  158  ls
+  159  cd Contents/
+  160  ls
+  161  cd Home
+  162  ls
+  163  pwd
+  164  export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home
+  165  echo $JRE_HOME
+  166  echo $JAVA_HOME
+  167  mvn spring-boot:run
+  168  mvn spring-boot:run -X
+  169  clear
+  170  mvn spring-boot:run -X
+  171  clear
+  172  mvn spring-boot:run -X
+  173  clear
+  174  cd
+  175  cd Documents/
+  176  ls
+  177  cd Software/
+  178  ls
+  179  cd Spring/
+  180  ls
+  181  ls
+  182  cd ..
+  183  ls
+  184  ls -l Spring/
+  185  which spring-boot
+  186  cd /usr/local/
+  187  ls -ltr
+  188  cd smlnj/
+  189  ls
+  190  cd ..
+  191  cd -
+  192  cd bin
+  193  ls
+  194  cd ..
+  195  ls
+  196  cd ..
+  197  ls
+  198  cd ..
+  199  ls
+  200  cd bin
+  201  ls
+  202  cd
+  203  cd Documents/workspace/springSecurityAngular/
+  204  ls
+  205  mvn spring-boot :run
+  206  mvn spring-boot:run
+  207  pwd
+  208  ls
+  209  cd
+  210  ls
+  211  cd Documents/workspace/
+  212  ls
+  213  cd springSecurityAngular/
+  214  ls
+  215  pwd
+  216  ls
+  217  cd ..
+  218  ls
+  219  ls
+  220  cd springSecurityAngular/
+  221  ls
+  222  mvn spring-boot:run
+  223  mvn package
+  224  java -jar target/*.jar
+  225  mvn package
+  226  mvn package
+  227  clear
+  228  ls
+  229  cd ..
+  230  s
+  231  ls
+  232  cd springSecurityAngular/
+  233  ls
+  234  cd target/
+  235  ls
+  236  cd wro
+  237  ls -ltr
+  238  rm wro.propertie wro.properties
+  239  ls
+  240  ls
+  241  ls -ltr
+  242  clear
+  243  ls
+  244  cd ..
+  245  ls
+  246  cd wro
+  247  ls
+  248  mvn package
+  249  cd ../
+  250  ls
+  251  cd ..
+  252  ls
+  253  mvn package
+  254  java -jar target/*.jar
+  255  mvn package
+  256  java -jar target/*.jar
+  257  mvn package
+  258  java -jar target/*.jar
+  259  mvn package
+  260  java -jar target/*.jar
+  261  mvn package
+  262  java -jar target/*.jar
+  263  mvn package
+  264  java -jar target/*.jar
+  265  mvn package
+  266  java -jar target/*.jar
+  267  cd
+  268   Documents/
+  269  cd Soft
+  270  cd Documents/Software/Tomcat/
+  271  ls
+  272  cd apache-tomcat-8.0.20/
+  273  ls
+  274  cd apache-tomcat-8.0.20
+  275  ls
+  276  cd logs
+  277  l -ltr
+  278  ls -ltr
+  279  cd Documents/
+  280  ls
+  281  cd Software/MongoDB/
+  282  ls
+  283  cd mongodb-osx-x86_64-3.0.4
+  284  ls
+  285  cd bin
+  286  ls
+  287  ./mongod
+  288  pwd
+  289  clear
+  290  vi /Users/ami/Documents/workspace/springSecurityAngular/target/surefire-reports 
+  291  ls
+  292  cd /Users/ami/Documents/workspace/springSecurityAngular/target/surefire-reports 
+  293  ls
+  294  ls -ltr
+  295  vi /Users/ami/Documents/workspace/springSecurityAngular/target/surefire-reports 
+  296  cd
+  297  cd Documents/workspace/springSecurityAngular/
+  298  ls
+  299  cd target/
+  300  ls
+  301  cd generated-resources/
+  302  ls
+  303  cd static/
+  304  ls
+  305  cd ..
+  306  ls
+  307  cd ..
+  308  ls
+  309  cd generated-sources/
+  310  ls
+  311  cd annotations/
+  312  ls
+  313  ls
+  314  cd ..
+  315  ../
+  316  ls
+  317  cd ..
+  318  ls
+  319  cd maven-archiver/
+  320  ks
+  321  ls
+  322  cd pom.properties 
+  323  ls -ltr
+  324  vi pom.properties 
+  325  cd ..
+  326  ls
+  327  cd maven-status/
+  328  ls -ltr
+  329  cd maven-compiler-plugin/
+  330  ls
+  331  cd compile/
+  332  ls
+  333  cd default-compile/
+  334  ls -ltr
+  335  vi inputFiles.lst 
+  336  ../
+  337  ls
+  338  cd ..
+  339  ls
+  340  cd ..
+  341  ls
+  342  cd ..
+  343  ls
+  344  cd ..
+  345  ls
+  346  cd classes/
+  347  ls
+  348  cd static/
+  349  ls
+  350  cd ..
+  351  ls
+  352  exit
+  353  cd
+  354  cd Documents/workspace/
+  355  s
+  356  ls
+  357  cd irent
+  358  ls
+  359  cordova build
+  360  ls
+  361  pwd
+  362  export M2_HOME=/Users/ami/Documents/Software/Maven/apache-maven-3.2.5-bin/apache-maven-3.2.5
+  363  export M2=$M2_HOME/bin
+  364  export PATH=$M2:$PATH
+  365  ls
+  366  mvn package
+  367  jar
+  368  java -jar target/*.jar
+  369  pwd
+  370  ls
+  371  pwd
+  372  mvn clean install
+  373  java -jar target/*.jar
+  374  ls -ltr /target
+  375  ls
+  376  cd target/
+  377  ls -ltr
+  378  pwd
+  379  cd 
+  380  cd Documents/Software/Tomcat/
+  381  ls
+  382  cd apache-tomcat-8.0.20/
+  383  ls
+  384  cd apache-tomcat-8.0.20
+  385  ls
+  386  cd bin
+  387  ls
+  388  ./
+  389  ./startup.sh 
+  390  ./catalina.sh 
+  391  ls -ltr
+  392  pswd
+  393  pwd
+  394  cd
+  395  cd
+  396  ls
+  397  cd Documents/
+  398  ls
+  399  cd work
+  400  cd workspace/
+  401  ls
+  402  cd irent
+  403  ls
+  404  python -m SimpleHTTPServer 3030
+  405  python -m SimpleHTTPServer 3030
+  406  python -m SimpleHTTPServer 3030
+  407  cd
+  408  cd Documents/Software/MongoDB/
+  409  ls
+  410  cd mongodb-osx-x86_64-3.0.4
+  411  ls
+  412  cd bin
+  413  ls
+  414  mongod
+  415  mongod
+  416  pwd
+  417  ls
+  418  mongod
+  419  echo $PATH
+  420  ./mongod
+  421  hostname
+  422  pwd
+  423  cd 
+  424  cd Documents/Software/
+  425  ls
+  426  cd ../../
+  427  ls
+  428  cd Documents/workspace/
+  429  ls
+  430  cd irentMaven/
+  431  ls
+  432  cd target/
+  433  ls
+  434  java -jar target/*.jar
+  435  cd..
+  436  cd ..
+  437  java -jar target/*.jar
+  438  mvn package
+  439  history
+  440  history > a
+  441  vi a
+  442  history > a1
+  443  vi a1
+  444  cd Documents/Software/MongoDB/
+  445  ls
+  446  cd mongodb-osx-x86_64-3.0.4
+  447  ls
+  448  cd bin
+  449  ls
+  450  ./mongod
+  451  cd Documents/workspace/irentMaven/
+  452  ls
+  453  mvn package
+  454  export
+  455  vi a
+  456  export M2_HOME=/Users/ami/Documents/Software/Maven/apache-maven-3.2.5-bin/apache-maven-3.2.5
+  457    196  echo $M2_HOME
+  458    197  export M2=$M2_HOME/bin
+  459  export M2_HOME=/Users/ami/Documents/Software/Maven/apache-maven-3.2.5-bin/apache-maven-3.2.5
+  460  export M2=$M2_HOME/bin
+  461  export PATH=$M2:$PATH
+  462  echo $PATH
+  463  mvn package
+  464  clear
+  465  mvn package
+  466  mvn -X package
+  467  clear
+  468  ls
+  469  cd ..
+  470  ls
+  471  cd p>First Name is   {{user.firstName}}</p>
+  472  <p>Last Name is {{user.lastName}}</p>
+  473  cd springBootRestConsumption/
+  474  ls
+  475  ls
+  476  mvn package
+  477  mvn -X package
+  478  clear
+  479  spring run app.groovy
+  480  pwd
+  481  ls
+  482  spring
+  483  ls -l ../../
+  484  cd 
+  485  cd Documents/Software/
+  486  ls
+  487  cd Spring/
+  488  ls
+  489  ls
+  490  which spring
+  491  /usr/ami
+  492  cd /usr/ami
+  493  cd /usr
+  494  cd /user
+  495  ls
+  496  pwd
+  497  cd bin
+  498  ls
+  499  cd
+  500  ls
+  501  cd Documents/git
+  502  ls
+  503  cd pix
+  504  ls
+  505  git remote show origin
+  506  git remote show
+  507  git remote add origin git@github.com:AmiParadkar/irent.git
+  508  git pull origin
+  509  cd ~
+  510  cd ~/.ssh
+  511  ls
+  512  vi id_rsa.pub 
+  513  vi
+  514  vi id_rsa.pub 
+  515  cd 
+  516  cd Documents/git/pix
+  517  ls
+  518  git pull origin
+  519  git status
+  520  git add .
+  521  git status
+  522  git commit -m "intital commit"
+  523  git push origin master
+  524  git pull origin
+  525  clear
+  526  git push origin master
+  527  git pull origin master
+  528  git push origin master
+  529  git pull origin master
+  530  git status
+  531  git diff
+  532  git diff
+  533  git commit -am "added readme file"
+  534  git push origin master
+  535  git remote show
+  536  history > a2

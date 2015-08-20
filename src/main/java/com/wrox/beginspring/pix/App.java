@@ -57,7 +57,7 @@ public class App implements CommandLineRunner
     		
     		prodRepository.deleteAll();
     		
-    		prodRepository.save(new Product(1, "Prod1", "Prod1 Desc", 1, 100, 20.00,"file:///Users/ami/Documents/Paintings/IMG_1166.JPG"));
+    		prodRepository.save(new Product(1, "Prod1", "Prod1 Desc", 1, 100, 20.00,"IMG_3150.JPG"));
     		prodRepository.save(new Product(2, "Prod2", "Prod2 Desc", 1, 200, 30.30,"/Users/ami/Documents/Paintings/IMG_0458.JPG"));
     		prodRepository.save(new Product(3, "Prod3", "Prod3 Desc", 1, 300, 50.00,"/Users/ami/Documents/Paintings/IMG_1166.JPG"));
     		
