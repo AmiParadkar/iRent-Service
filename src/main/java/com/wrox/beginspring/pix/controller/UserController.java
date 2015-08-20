@@ -15,7 +15,7 @@ public class UserController {
 		private final UserRepository userRepository ;
 
 	    @RequestMapping(value = "/pix/user/{userFirstName}", method = RequestMethod.GET)
-	    User getDetails(@PathVariable String userFirstName){
+	    User getDetails(@PathVariable String userFirstName){	    	
 	    	System.out.println("USERID == "+userFirstName);
 	    	return this.userRepository.findByFirstName(userFirstName);
 	    }
@@ -23,4 +23,5 @@ public class UserController {
 	    UserController(UserRepository userRepository) {
 			this.userRepository = userRepository;
 		}
+	    
 }

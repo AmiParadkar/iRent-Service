@@ -5,6 +5,7 @@ package com.wrox.beginspring.pix.model;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import org.springframework.data.annotation.Id;
 
 
@@ -22,6 +23,7 @@ public class User {
 	private  String lastName;
 	private  String email;
 	private  String password;
+	private  Integer phone;
 	private int userRating;
 	private int userType; // type can be just viewer or valid user
 	private List<UserFeedback> userFeedbackList = new ArrayList<UserFeedback>();
@@ -30,7 +32,7 @@ public class User {
 	 * 
 	 */
 	public User() {
-		// TODO Auto-generated constructor stub
+		super();
 	}
 
 	public User(int userId, String userName, String firstName, String lastName,
@@ -43,6 +45,18 @@ public class User {
 		this.email = email;
 		this.password = password;
 		this.userRating = userRating;
+	}
+
+	public User(int id, String userName, String firstName, String lastName,
+			String email, String password, Integer phone) {
+		super();
+		this.id = id;
+		this.userName = userName;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+		this.password = password;
+		this.phone = phone;
 	}
 
 	public User(int userId, String userName, String firstName, String lastName,
@@ -122,6 +136,14 @@ public class User {
 		this.userType = userType;
 	}
 
+	public Integer getPhone() {
+		return phone;
+	}
+
+	public void setPhone(Integer phone) {
+		this.phone = phone;
+	}
+
 	public List<UserFeedback> getUserFeedBackList() {
 		return userFeedbackList;
 	}
@@ -143,11 +165,15 @@ public class User {
 		result = prime * result + ((email == null) ? 0 : email.hashCode());
 		result = prime * result
 				+ ((firstName == null) ? 0 : firstName.hashCode());
+		result = prime * result + id;
 		result = prime * result
 				+ ((lastName == null) ? 0 : lastName.hashCode());
 		result = prime * result
 				+ ((password == null) ? 0 : password.hashCode());
-		result = prime * result + id;
+		result = prime * result + ((phone == null) ? 0 : phone.hashCode());
+		result = prime
+				* result
+				+ ((userFeedbackList == null) ? 0 : userFeedbackList.hashCode());
 		result = prime * result
 				+ ((userName == null) ? 0 : userName.hashCode());
 		result = prime * result + userRating;
@@ -174,6 +200,8 @@ public class User {
 				return false;
 		} else if (!firstName.equals(other.firstName))
 			return false;
+		if (id != other.id)
+			return false;
 		if (lastName == null) {
 			if (other.lastName != null)
 				return false;
@@ -184,7 +212,15 @@ public class User {
 				return false;
 		} else if (!password.equals(other.password))
 			return false;
-		if (id != other.id)
+		if (phone == null) {
+			if (other.phone != null)
+				return false;
+		} else if (!phone.equals(other.phone))
+			return false;
+		if (userFeedbackList == null) {
+			if (other.userFeedbackList != null)
+				return false;
+		} else if (!userFeedbackList.equals(other.userFeedbackList))
 			return false;
 		if (userName == null) {
 			if (other.userName != null)
