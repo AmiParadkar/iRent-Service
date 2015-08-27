@@ -1,5 +1,8 @@
 package com.wrox.beginspring.pix.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,6 +25,18 @@ public class ProductController {
 	    	System.out.println("-------------------------");
 	    	System.out.println(prod.toString());
 	    	return this.prodRepository.findByProdName(prodName);
+	    }
+	    @RequestMapping(value = "/pix/product/all", method = RequestMethod.GET)
+	    List<Product> getAllProducts(){	    	
+	    	List<Product> prod = new ArrayList<Product>();
+	    	prod = this.prodRepository.findAll();
+	    	for (Product p : prod) {
+	    		System.out.println("-------------------------");
+    			System.out.println(p.toString());
+    		}
+	    	
+	    	
+	    	return prod;
 	    }
 	    
 	    @Autowired

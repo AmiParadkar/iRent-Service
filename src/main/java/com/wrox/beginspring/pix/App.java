@@ -58,8 +58,16 @@ public class App implements CommandLineRunner
     		prodRepository.deleteAll();
     		
     		prodRepository.save(new Product(1, "Prod1", "Prod1 Desc", 1, 100, 20.00,"IMG_3150.JPG"));
-    		prodRepository.save(new Product(2, "Prod2", "Prod2 Desc", 1, 200, 30.30,"/Users/ami/Documents/Paintings/IMG_0458.JPG"));
-    		prodRepository.save(new Product(3, "Prod3", "Prod3 Desc", 1, 300, 50.00,"/Users/ami/Documents/Paintings/IMG_1166.JPG"));
+    		prodRepository.save(new Product(2, "Prod2", "Prod2 Desc", 1, 200, 30.30,"IMG_0455.JPG"));
+    		prodRepository.save(new Product(3, "Prod3", "Prod3 Desc", 1, 300, 50.00,"IMG_0458.JPG"));
+    		prodRepository.save(new Product(4, "Prod4", "Prod4 Desc", 1, 300, 50.00,"IMG_1458.JPG"));
+    		prodRepository.save(new Product(5, "Prod5", "Prod5 Desc", 1, 300, 50.00,"IMG_3048.JPG"));
+    		prodRepository.save(new Product(6, "Prod6", "Prod6 Desc", 1, 300, 50.00,"IMG_3085.JPG"));
+    		prodRepository.save(new Product(7, "Prod7", "Prod7 Desc", 1, 300, 50.00,"IMG_3147.JPG"));
+    		prodRepository.save(new Product(8, "Prod8", "Prod8 Desc", 1, 300, 50.00,"IMG_3150.JPG"));
+    		prodRepository.save(new Product(9, "Prod9", "Prod9 Desc", 1, 300, 50.00,"IMG_3157.JPG"));
+    		prodRepository.save(new Product(10, "Prod10", "Prod10 Desc", 1, 300, 50.00,"Image1.jpg"));
+    		
     		
 
     		// fetch all Products
