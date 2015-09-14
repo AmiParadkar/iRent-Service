@@ -1,0 +1,23 @@
+drop table if exists irent.app_user
+
+create table irent.app_user(
+id serial,
+first_name varchar(255),
+last_name varchar(255),
+user_name varchar(255),
+password varchar(255),
+email varchar(255));
+
+
+
+
+drop table if exists irent.product;
+
+create table irent.product(
+id serial,
+prod_name varchar(255),
+prod_desc varchar(255),
+prod_type int,
+prod_quantity int,
+prod_price int,
+prod_image_path varchar(255));

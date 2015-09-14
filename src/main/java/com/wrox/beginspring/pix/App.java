@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import com.wrox.beginspring.pix.dao.ProductRepository;
 import com.wrox.beginspring.pix.dao.UserRepository;
 import com.wrox.beginspring.pix.model.Product;
-import com.wrox.beginspring.pix.model.User;
+import com.wrox.beginspring.pix.model.AppUser;
 
 /**
  * Hello world!
@@ -31,15 +31,15 @@ public class App implements CommandLineRunner
     		repository.deleteAll();
 
     		// save a couple of customers
-    		repository.save(new User(1, "Alice", "Alice", "Smith", "alicesmith@abc.com", "1234", 3,1));
-    		repository.save(new User(2, "Bob", "Bob", "Smith", "BobSmith@bacd.com", "2345", 0,1));
-    		repository.save(new User(3, "Ami", "ami", "mehta", "amimehta@bacd.com", "2345", 0,1));
+    		repository.save(new AppUser("Alice", "Alice", "1234","Smith", "alicesmith@abc.com"));
+    		repository.save(new AppUser("Bob", "Bob", "2345","Smith", "BobSmith@bacd.com"));
+    		repository.save(new AppUser("Ami", "ami", "2345","mehta", "amimehta@bacd.com"));
     		
 
     		// fetch all customers
     		System.out.println("User found with findAll():");
     		System.out.println("-------------------------------");
-    		for (User user : repository.findAll()) {
+    		for (AppUser user : repository.findAll()) {
     			System.out.println(user.toString());
     		}
     		System.out.println();
@@ -51,22 +51,22 @@ public class App implements CommandLineRunner
 
     		System.out.println("Customers found with findByLastName('Smith'):");
     		System.out.println("--------------------------------");
-    		for (User user : repository.findByLastName("Smith")) {
+    		for (AppUser user : repository.findByLastName("Smith")) {
     			System.out.println(user);
     		}
     		
     		prodRepository.deleteAll();
     		
-    		prodRepository.save(new Product(1, "Prod1", "Prod1 Desc", 1, 100, 20.00,"IMG_3150.JPG"));
-    		prodRepository.save(new Product(2, "Prod2", "Prod2 Desc", 1, 200, 30.30,"IMG_0455.JPG"));
-    		prodRepository.save(new Product(3, "Prod3", "Prod3 Desc", 1, 300, 50.00,"IMG_0458.JPG"));
-    		prodRepository.save(new Product(4, "Prod4", "Prod4 Desc", 1, 300, 50.00,"IMG_1458.JPG"));
-    		prodRepository.save(new Product(5, "Prod5", "Prod5 Desc", 1, 300, 50.00,"IMG_3048.JPG"));
-    		prodRepository.save(new Product(6, "Prod6", "Prod6 Desc", 1, 300, 50.00,"IMG_3085.JPG"));
-    		prodRepository.save(new Product(7, "Prod7", "Prod7 Desc", 1, 300, 50.00,"IMG_3147.JPG"));
-    		prodRepository.save(new Product(8, "Prod8", "Prod8 Desc", 1, 300, 50.00,"IMG_3150.JPG"));
-    		prodRepository.save(new Product(9, "Prod9", "Prod9 Desc", 1, 300, 50.00,"IMG_3157.JPG"));
-    		prodRepository.save(new Product(10, "Prod10", "Prod10 Desc", 1, 300, 50.00,"Image1.jpg"));
+    		prodRepository.save(new Product("Prod1", "Prod1 Desc", 1, 100, 20.00,"IMG_3150.JPG"));
+    		prodRepository.save(new Product("Prod2", "Prod2 Desc", 1, 200, 30.30,"IMG_0455.JPG"));
+    		prodRepository.save(new Product("Prod3", "Prod3 Desc", 1, 300, 50.00,"IMG_0458.JPG"));
+    		prodRepository.save(new Product("Prod4", "Prod4 Desc", 1, 300, 50.00,"IMG_1458.JPG"));
+    		prodRepository.save(new Product("Prod5", "Prod5 Desc", 1, 300, 50.00,"IMG_3048.JPG"));
+    		prodRepository.save(new Product("Prod6", "Prod6 Desc", 1, 300, 50.00,"IMG_3085.JPG"));
+    		prodRepository.save(new Product("Prod7", "Prod7 Desc", 1, 300, 50.00,"IMG_3147.JPG"));
+    		prodRepository.save(new Product("Prod8", "Prod8 Desc", 1, 300, 50.00,"IMG_3150.JPG"));
+    		prodRepository.save(new Product("Prod9", "Prod9 Desc", 1, 300, 50.00,"IMG_3157.JPG"));
+    		prodRepository.save(new Product("Prod10", "Prod10 Desc", 1, 300, 50.00,"Image1.jpg"));
     		
     		
 
@@ -85,7 +85,7 @@ public class App implements CommandLineRunner
 
     		System.out.println("Prod found with findById(1):");
     		System.out.println("--------------------------------");
-    		for (Product prod : prodRepository.findById(1)) {
+    		for (Product prod : prodRepository.findById(1L)) {
     			System.out.println(prod);
     		}
 

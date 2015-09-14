@@ -17,7 +17,7 @@ public class ProductController {
 
 		private final ProductRepository prodRepository ;
 
-	    @RequestMapping(value = "/pix/product/{prodName}", method = RequestMethod.GET)
+	    @RequestMapping(value = "/iRentService/product/{prodName}", method = RequestMethod.GET)
 	    Product getDetails(@PathVariable String prodName){	    	
 	    	System.out.println("Prod == "+prodName);
 	    	//System.out.println("Product ="+(this.prodRepository.findByProdName(prodName)).toString());
@@ -26,10 +26,10 @@ public class ProductController {
 	    	System.out.println(prod.toString());
 	    	return this.prodRepository.findByProdName(prodName);
 	    }
-	    @RequestMapping(value = "/pix/product/all", method = RequestMethod.GET)
+	    @RequestMapping(value = "/iRentService/product/all", method = RequestMethod.GET)
 	    List<Product> getAllProducts(){	    	
 	    	List<Product> prod = new ArrayList<Product>();
-	    	prod = this.prodRepository.findAll();
+	    	prod = (List<Product>) this.prodRepository.findAll();
 	    	for (Product p : prod) {
 	    		System.out.println("-------------------------");
     			System.out.println(p.toString());

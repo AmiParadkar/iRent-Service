@@ -1,26 +1,43 @@
 package com.wrox.beginspring.pix.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table (name="product", schema="irent")
 public class Product {
-	
-	private Integer id;
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name = "id")
+	private Long id;
+	@Column(name = "prod_name")
 	private String prodName;
+	@Column(name = "prod_desc")
 	private String prodDesc;
+	@Column(name = "prod_type")
 	private Integer prodType;
+	@Column(name = "prod_quantity")
 	private Integer prodQuantity;
+	@Column(name = "prod_price")
 	private Double prodPrice;
+	@Column(name = "prod_image_path")
 	private String prodImagePath;
 	
 
-	public Product() {
+	protected Product() {
 		// TODO Auto-generated constructor stub
 	}
 	
 
-	public Product(Integer id, String prodName, String prodDesc,
+	public Product( String prodName, String prodDesc,
 			Integer prodType, Integer prodQuantity, Double prodPrice,
 			String prodImagePath) {
 		super();
-		this.id = id;
+	
 		this.prodName = prodName;
 		this.prodDesc = prodDesc;
 		this.prodType = prodType;
@@ -30,13 +47,13 @@ public class Product {
 	}
 
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
 
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
