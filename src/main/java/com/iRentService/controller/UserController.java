@@ -1,4 +1,4 @@
-package com.wrox.beginspring.pix.controller;
+package com.iRentService.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.wrox.beginspring.pix.dao.UserRepository;
-import com.wrox.beginspring.pix.model.AppUser;
+import com.iRentService.dao.UserRepository;
+import com.iRentService.model.AppUser;
 
 @RestController
 public class UserController {

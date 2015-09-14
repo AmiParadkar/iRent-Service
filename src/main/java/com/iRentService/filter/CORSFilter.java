@@ -1,4 +1,4 @@
-package com.wrox.beginspring.pix.filter;
+package com.iRentService.filter;
 import java.io.IOException;
 
 import javax.servlet.Filter;

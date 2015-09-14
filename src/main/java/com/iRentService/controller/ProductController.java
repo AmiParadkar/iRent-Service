@@ -1,4 +1,4 @@
-package com.wrox.beginspring.pix.controller;
+package com.iRentService.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.wrox.beginspring.pix.dao.ProductRepository;
-import com.wrox.beginspring.pix.model.Product;
+import com.iRentService.dao.ProductRepository;
+import com.iRentService.model.Product;
 
 @RestController
 public class ProductController {

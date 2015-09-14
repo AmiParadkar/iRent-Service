@@ -1,10 +1,10 @@
-package com.wrox.beginspring.pix.dao;
+package com.iRentService.dao;
 
 import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.wrox.beginspring.pix.model.AppUser;
+import com.iRentService.model.AppUser;
 //public interface UserRepository extends MongoRepository<AppUser,String>{
 public interface UserRepository extends CrudRepository<AppUser,Integer>{
 

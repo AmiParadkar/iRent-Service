@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.wrox.beginspring.pix.model;
+package com.iRentService.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

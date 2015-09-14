@@ -1,14 +1,14 @@
-package com.wrox.beginspring.pix;
+package com.iRentService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.wrox.beginspring.pix.dao.ProductRepository;
-import com.wrox.beginspring.pix.dao.UserRepository;
-import com.wrox.beginspring.pix.model.Product;
-import com.wrox.beginspring.pix.model.AppUser;
+import com.iRentService.dao.ProductRepository;
+import com.iRentService.dao.UserRepository;
+import com.iRentService.model.AppUser;
+import com.iRentService.model.Product;
 
 /**
  * Hello world!
