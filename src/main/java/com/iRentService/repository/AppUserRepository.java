@@ -1,4 +1,4 @@
-package com.iRentService.dao;
+package com.iRentService.repository;
 
 import java.util.List;
 
@@ -6,12 +6,12 @@ import org.springframework.data.repository.CrudRepository;
 
 import com.iRentService.model.AppUser;
 //public interface UserRepository extends MongoRepository<AppUser,String>{
-public interface UserRepository extends CrudRepository<AppUser,Integer>{
+public interface AppUserRepository extends CrudRepository<AppUser,Integer>{
 
 		public AppUser findByFirstName (String firstName);
 		public List<AppUser> findByLastName (String lastName);
 		public List<AppUser> findAll();
-		public AppUser findById(int userId);
+		public AppUser findById(Long userId);
 		//public void save(String firstName, String lastName);
 
 		

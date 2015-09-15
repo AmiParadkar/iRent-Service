@@ -6,13 +6,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.iRentService.dao.UserRepository;
 import com.iRentService.model.AppUser;
+import com.iRentService.repository.AppUserRepository;
 
 @RestController
-public class UserController {
+public class AppUserController {
 
-		private final UserRepository userRepository ;
+		private final AppUserRepository userRepository ;
 
 	    @RequestMapping(value = "/iRentService/user/{userFirstName}", method = RequestMethod.GET)
 	    AppUser getDetails(@PathVariable String userFirstName){	    	
@@ -20,7 +20,7 @@ public class UserController {
 	    	return this.userRepository.findByFirstName(userFirstName);
 	    }
 	    @Autowired
-	    UserController(UserRepository userRepository) {
+	    AppUserController(AppUserRepository userRepository) {
 			this.userRepository = userRepository;
 		}
 	    

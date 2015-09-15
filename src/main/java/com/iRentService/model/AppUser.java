@@ -3,11 +3,14 @@
  */
 package com.iRentService.model;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 
@@ -22,7 +25,7 @@ public class AppUser {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name = "id")
-	private long id;
+	private Long id;
 	@Column(name="user_name")
 	private  String userName;
 	@Column(name="first_name")
@@ -33,11 +36,9 @@ public class AppUser {
 	private  String email;
 	@Column(name="password")
 	private  String password;
-	//private  Integer phone;
-	//private int userRating;
-	//private int userType; // type can be just viewer or valid user
-	//private List<UserFeedback> userFeedbackList = new ArrayList<UserFeedback>();
-
+	@OneToMany(mappedBy="appUser")
+	private List<Product> listProducts;
+	
 	/**
 	 * 
 	 */
@@ -57,11 +58,11 @@ public class AppUser {
 	}
 
 	
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -105,53 +106,83 @@ public class AppUser {
 		this.password = password;
 	}
 
-	/*public int getUserRating() {
-		return userRating;
+
+	public List<Product> getListProducts() {
+		return listProducts;
 	}
 
-	public void setUserRating(int userRating) {
-		this.userRating = userRating;
+
+	public void setListProducts(List<Product> listProducts) {
+		this.listProducts = listProducts;
 	}
 
-	public int getUserType() {
-		return userType;
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((email == null) ? 0 : email.hashCode());
+		result = prime * result + ((firstName == null) ? 0 : firstName.hashCode());
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		result = prime * result + ((lastName == null) ? 0 : lastName.hashCode());
+		result = prime * result + ((listProducts == null) ? 0 : listProducts.hashCode());
+		result = prime * result + ((password == null) ? 0 : password.hashCode());
+		result = prime * result + ((userName == null) ? 0 : userName.hashCode());
+		return result;
 	}
 
-	public void setUserType(int userType) {
-		this.userType = userType;
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		AppUser other = (AppUser) obj;
+		if (email == null) {
+			if (other.email != null)
+				return false;
+		} else if (!email.equals(other.email))
+			return false;
+		if (firstName == null) {
+			if (other.firstName != null)
+				return false;
+		} else if (!firstName.equals(other.firstName))
+			return false;
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
+			return false;
+		if (lastName == null) {
+			if (other.lastName != null)
+				return false;
+		} else if (!lastName.equals(other.lastName))
+			return false;
+		if (listProducts == null) {
+			if (other.listProducts != null)
+				return false;
+		} else if (!listProducts.equals(other.listProducts))
+			return false;
+		if (password == null) {
+			if (other.password != null)
+				return false;
+		} else if (!password.equals(other.password))
+			return false;
+		if (userName == null) {
+			if (other.userName != null)
+				return false;
+		} else if (!userName.equals(other.userName))
+			return false;
+		return true;
 	}
 
-	public Integer getPhone() {
-		return phone;
-	}
-
-	public void setPhone(Integer phone) {
-		this.phone = phone;
-	}
-
-	public List<UserFeedback> getUserFeedBackList() {
-		return userFeedbackList;
-	}
-
-	public void setUserFeedBackList(List<UserFeedback> userFeedBackList) {
-		this.userFeedbackList = userFeedBackList;
-	}*/
-	/**
-	 *  Add user feed back to the user object
-	 */
-	/*public void addUserFeedBack(UserFeedback usrFB){
-		//usrFB.setUser(this);
-		userFeedbackList.add(usrFB);
-	}*/
-	
 
 	@Override
 	public String toString() {
-		return "User [userId=" + id + ", userName=" + userName
-				+ ", firstName=" + firstName + ", lastName=" + lastName
-				+ ", email=" + email + ", password=" + password
-				//+ ", userRating=" + userRating + ", userType=" + userType +
-				+ "]";
+		return "AppUser [id=" + id + ", userName=" + userName + ", firstName=" + firstName + ", lastName=" + lastName
+				+ ", email=" + email + ", password=" + password + ", listProducts=" + listProducts + "]";
 	}
 
 }

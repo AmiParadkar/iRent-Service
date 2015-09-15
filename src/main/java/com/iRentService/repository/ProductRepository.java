@@ -1,4 +1,4 @@
-package com.iRentService.dao;
+package com.iRentService.repository;
 
 import java.util.List;
 

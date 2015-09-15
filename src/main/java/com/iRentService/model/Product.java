@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -26,6 +28,9 @@ public class Product {
 	private Double prodPrice;
 	@Column(name = "prod_image_path")
 	private String prodImagePath;
+	@ManyToOne
+	@JoinColumn(name="user_id")
+	private AppUser appUser;
 	
 
 	protected Product() {
@@ -44,6 +49,19 @@ public class Product {
 		this.prodQuantity = prodQuantity;
 		this.prodPrice = prodPrice;
 		this.prodImagePath = prodImagePath;
+	}
+	public Product( String prodName, String prodDesc,
+			Integer prodType, Integer prodQuantity, Double prodPrice,
+			String prodImagePath,AppUser appUser) {
+		super();
+	
+		this.prodName = prodName;
+		this.prodDesc = prodDesc;
+		this.prodType = prodType;
+		this.prodQuantity = prodQuantity;
+		this.prodPrice = prodPrice;
+		this.prodImagePath = prodImagePath;
+		this.appUser = appUser;
 	}
 
 
@@ -127,6 +145,16 @@ public class Product {
 
 	public void setProdImagePath(String prodImagePath) {
 		this.prodImagePath = prodImagePath;
+	}
+
+
+	public AppUser getAppUser() {
+		return appUser;
+	}
+
+
+	public void setAppUser(AppUser appUser) {
+		this.appUser = appUser;
 	}
 
 
