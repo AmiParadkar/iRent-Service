@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.iRentService.model.AppUser;
@@ -22,6 +23,8 @@ public class App implements CommandLineRunner
     	private AppUserRepository repository;
 		@Autowired
 		private ProductRepository prodRepository;
+		@Autowired
+		private ConfigurableEnvironment  myEnv;
 
     	public static void main(String[] args) {
     		SpringApplication.run(App.class, args);
@@ -29,6 +32,9 @@ public class App implements CommandLineRunner
     	@Transactional
     	public void run(String... args) throws Exception {
 
+    		System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+    		System.out.println("Database url = "+ myEnv.getProperty("spring.datasource.url"));
+    		System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
     		repository.deleteAll();
 
     		// save a couple of customers

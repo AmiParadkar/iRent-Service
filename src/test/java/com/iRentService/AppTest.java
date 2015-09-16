@@ -1,4 +1,4 @@
-package com.wrox.beginspring.pix;
+package com.iRentService;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
