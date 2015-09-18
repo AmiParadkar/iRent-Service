@@ -7,11 +7,14 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 
 /**
@@ -36,13 +39,14 @@ public class AppUser {
 	private  String email;
 	@Column(name="password")
 	private  String password;
-	@OneToMany(mappedBy="appUser")
+	@OneToMany(mappedBy="appUser",fetch = FetchType.LAZY)
+	@JsonManagedReference
 	private List<Product> listProducts;
 	
 	/**
 	 * 
 	 */
-	protected AppUser() {}
+	public AppUser() {}
 	
 
 	public AppUser (String userName, String firstName, String lastName,

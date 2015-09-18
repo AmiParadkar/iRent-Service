@@ -23,7 +23,8 @@ public class ProductController {
 	    	//System.out.println("Product ="+(this.prodRepository.findByProdName(prodName)).toString());
 	    	Product prod = this.prodRepository.findByProdName(prodName);
 	    	System.out.println("-------------------------");
-	    	System.out.println(prod.toString());
+	    	if(prod != null)
+	    		System.out.println(prod.toString());
 	    	return this.prodRepository.findByProdName(prodName);
 	    }
 	    @RequestMapping(value = "/iRentService/product/all", method = RequestMethod.GET)
