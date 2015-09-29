@@ -10,7 +10,8 @@ import com.iRentService.model.Product;
 public interface ProductRepository  extends CrudRepository<Product,Integer>{
 
 	public Product findByProdName (String prodName);
-	public List<Product> findById (Long id);
+	public Product findById (Long id);
+	public List<Product> findAll();
 	
 
 }

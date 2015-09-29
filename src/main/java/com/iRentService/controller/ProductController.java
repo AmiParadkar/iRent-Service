@@ -17,27 +17,37 @@ public class ProductController {
 
 		private final ProductRepository prodRepository ;
 
-	    @RequestMapping(value = "/iRentService/product/{prodName}", method = RequestMethod.GET)
-	    Product getDetails(@PathVariable String prodName){	    	
-	    	System.out.println("Prod == "+prodName);
+		@RequestMapping(value = "/iRentService/product/{prodId}", method = RequestMethod.GET)
+	    Product getDetailsById(@PathVariable Long prodId){	    	
+	    	System.out.println("Prod == "+prodId);
 	    	//System.out.println("Product ="+(this.prodRepository.findByProdName(prodName)).toString());
-	    	Product prod = this.prodRepository.findByProdName(prodName);
+	    	Product prod = (Product)this.prodRepository.findById(prodId);
 	    	System.out.println("-------------------------");
 	    	if(prod != null)
 	    		System.out.println(prod.toString());
-	    	return this.prodRepository.findByProdName(prodName);
+	    	return prod;
 	    }
+//	    @RequestMapping(value = "/iRentService/product/{prodName}", method = RequestMethod.GET)
+//	    Product getDetails(@PathVariable String prodName){	    	
+//	    	System.out.println("Prod == "+prodName);
+//	    	//System.out.println("Product ="+(this.prodRepository.findByProdName(prodName)).toString());
+//	    	Product prod = this.prodRepository.findByProdName(prodName);
+//	    	System.out.println("-------------------------");
+//	    	if(prod != null)
+//	    		System.out.println(prod.toString());
+//	    	return this.prodRepository.findByProdName(prodName);
+//	    }
 	    @RequestMapping(value = "/iRentService/product/all", method = RequestMethod.GET)
 	    List<Product> getAllProducts(){	    	
-	    	List<Product> prod = new ArrayList<Product>();
-	    	prod = (List<Product>) this.prodRepository.findAll();
-	    	for (Product p : prod) {
+	    	List<Product> prodList = new ArrayList<Product>();
+	    	prodList = (List<Product>) this.prodRepository.findAll();
+	    	for (Product p : prodList) {
 	    		System.out.println("-------------------------");
     			System.out.println(p.toString());
     		}
 	    	
 	    	
-	    	return prod;
+	    	return prodList;
 	    }
 	    
 	    @Autowired
