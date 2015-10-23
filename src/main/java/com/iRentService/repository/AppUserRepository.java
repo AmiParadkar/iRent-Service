@@ -12,7 +12,8 @@ public interface AppUserRepository extends CrudRepository<AppUser,Integer>{
 		public List<AppUser> findByLastName (String lastName);
 		public List<AppUser> findAll();
 		public AppUser findById(Long userId);
-		//public void save(String firstName, String lastName);
+		public AppUser save(AppUser appUser);
+		public void delete(AppUser appUser);
 
 		
 	}

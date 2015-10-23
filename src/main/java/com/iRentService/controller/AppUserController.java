@@ -26,21 +26,28 @@ public class AppUserController {
 		System.out.println("USERName == " + userFirstName);
 		return this.appUserRepository.findByFirstName(userFirstName);
 	}
-//	@RequestMapping(value = "/iRentService/user/{symbolicName:[/d]}", method = RequestMethod.GET)
-//	AppUser getDetailById(@PathVariable Long userId) {
-//		
-//		System.out.println("USERID == " + userId);
-//		return this.appUserRepository.findById(userId);
-//	}
+	@RequestMapping(value = "/iRentService/user?id={id}", method = RequestMethod.GET)
+	AppUser getDetailById(@PathVariable Long id) {
+		
+		System.out.println("USERID == " + id);
+		return this.appUserRepository.findById(id);
+	}
 
 	@RequestMapping(value = "/iRentService/user/all", method = RequestMethod.GET)
 	List<AppUser> getDetails() {
 		return this.appUserRepository.findAll();
 	}
 	@RequestMapping(value = "/iRentService/user/create", method = RequestMethod.POST)
-	void saveAppUser() {
+	AppUser saveAppUser(@PathVariable AppUser user) {
+		System.out.println("Inside Creat User");
+		System.out.println(this.appUserRepository.save(user));
+		 return  this.appUserRepository.save(user);
 
-		 //this.appUserRepository.save(appUser);
+	}
+	@RequestMapping(value = "/iRentService/user/delete", method = RequestMethod.POST)
+	void deleteAppUser(@PathVariable AppUser user) {
+
+		this.appUserRepository.delete(user);
 
 	}
 
